@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA CHEEZE - 25 Años de Tradición</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-green: #254F22;
+            --main-red: #A03A13;
+            --accent-orange: #F5824A;
+            --cream: #EDE4C2;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-green);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-main-red { background-color: var(--main-red); }
+        .bg-accent-orange { background-color: var(--accent-orange); }
+        .bg-dark-green { background-color: var(--dark-green); }
+        .text-main-red { color: var(--main-red); }
+        .text-dark-green { color: var(--dark-green); }
+        .border-main-red { border-color: var(--main-red); }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-orange);
+            transition: 0.3s;
+        }
+
+        .pizza-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-[#A03A13] text-[#EDE4C2] shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold tracking-tighter">PIZZA <span class="text-[#F5824A]">CHEEZE</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 uppercase text-sm font-semibold">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                        <a href="#menu" class="nav-link">Elige tu Pizza</a>
+                        <a href="#reseñas" class="nav-link">Reseñas</a>
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </div>
+                </div>
+                <!-- Botón Móvil -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#A03A13] border-t border-[#F5824A]">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+                <a href="#menu" class="block px-3 py-2 rounded-md text-base font-medium">Elige tu Pizza</a>
+                <a href="#reseñas" class="block px-3 py-2 rounded-md text-base font-medium">Reseñas</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <header id="inicio" class="hero-gradient h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-3xl">
+            <h2 class="text-[#F5824A] text-xl md:text-2xl font-semibold mb-2 drop-shadow-md">Tradición que se siente en cada mordida</h2>
+            <h1 class="text-[#EDE4C2] text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">25 AÑOS DE PIZZA REAL</h1>
+            <p class="text-[#EDE4C2] text-lg md:text-xl mb-8 opacity-90">Desde 1999, horneando momentos inolvidables con los ingredientes más frescos y el queso más fundente.</p>
+            <a href="#menu" class="bg-[#F5824A] hover:bg-[#A03A13] text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 transform hover:scale-105 inline-block">
+                Ver Menú
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección Menú -->
+    <section id="menu" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-main-red mb-4">Elige tu Pizza</h2>
+            <div class="w-24 h-1 bg-accent-orange mx-auto"></div>
+            <p class="mt-4 text-gray-700 max-w-2xl mx-auto">Nuestras recetas clásicas y creaciones especiales, preparadas al horno de piedra.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Pizza 1 -->
+            <div class="pizza-card bg-white rounded-2xl overflow-hidden shadow-xl border border-[#EDE4C2]">
+                <div class="h-56 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbad80ad38?auto=format&fit=crop&q=80&w=800" alt="Pizza Margherita" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-dark-green">Clásica Margherita</h3>
+                        <span class="text-main-red font-bold text-xl">$12.99</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Salsa de tomate artesanal, mozzarella fresca, albahaca orgánica y un toque de aceite de oliva.</p>
+                    <button class="w-full py-2 border-2 border-main-red text-main-red font-bold rounded-lg hover:bg-main-red hover:text-white transition">Agregar al pedido</button>
+                </div>
+            </div>
+
+            <!-- Pizza 2 -->
+            <div class="pizza-card bg-white rounded-2xl overflow-hidden shadow-xl border border-[#EDE4C2]">
+                <div class="h-56 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800" alt="Pizza Pepperoni" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-dark-green">Pepperoni Lover</h3>
+                        <span class="text-main-red font-bold text-xl">$14.99</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Doble ración de pepperoni premium sobre una cama de queso mozzarella fundido a la perfección.</p>
+                    <button class="w-full py-2 border-2 border-main-red text-main-red font-bold rounded-lg hover:bg-main-red hover:text-white transition">Agregar al pedido</button>
+                </div>
+            </div>
+
+            <!-- Pizza 3 -->
+            <div class="pizza-card bg-white rounded-2xl overflow-hidden shadow-xl border border-[#EDE4C2]">
+                <div class="h-56 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800" alt="Pizza Especial" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-dark-green">Cheeze Especial</h3>
+                        <span class="text-main-red font-bold text-xl">$16.50</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Nuestra pizza estrella: 5 variedades de queso, jamón serrano y champiñones frescos.</p>
+                    <button class="w-full py-2 border-2 border-main-red text-main-red font-bold rounded-lg hover:bg-main-red hover:text-white transition">Agregar al pedido</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Reseñas -->
+    <section id="reseñas" class="py-24 bg-[#254F22] text-[#EDE4C2]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Lo que dicen nuestros clientes</h2>
+                <div class="w-24 h-1 bg-accent-orange mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#1a3a18] p-8 rounded-xl shadow-lg italic">
+                    <div class="flex text-yellow-400 mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="mb-6">"He venido a Pizza Cheeze desde que era niño. La calidad nunca ha bajado en estos 25 años. ¡La mejor de la ciudad!"</p>
+                    <p class="font-bold text-[#F5824A]">— Carlos Rodríguez</p>
+                </div>
+                <div class="bg-[#1a3a18] p-8 rounded-xl shadow-lg italic">
+                    <div class="flex text-yellow-400 mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="mb-6">"La masa es increíblemente crujiente y el sabor del queso es único. Se nota que usan ingredientes de primera."</p>
+                    <p class="font-bold text-[#F5824A]">— Ana Martínez</p>
+                </div>
+                <div class="bg-[#1a3a18] p-8 rounded-xl shadow-lg italic">
+                    <div class="flex text-yellow-400 mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="mb-6">"Un lugar acogedor y una atención impecable. Los 25 años de experiencia se sienten en cada detalle."</p>
+                    <p class="font-bold text-[#F5824A]">— Juan Pérez</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto y Ubicación -->
+    <section id="contacto" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Formulario -->
+            <div>
+                <h2 class="text-4xl font-bold text-main-red mb-6">Contáctanos</h2>
+                <p class="text-gray-700 mb-8">¿Tienes un evento o quieres hacer un pedido grande? Escríbenos.</p>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Nombre Completo</label>
+                        <input type="text" class="w-full p-3 rounded-lg bg-white border border-gray-300 focus:ring-2 focus:ring-main-red outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Correo Electrónico</label>
+                        <input type="email" class="w-full p-3 rounded-lg bg-white border border-gray-300 focus:ring-2 focus:ring-main-red outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Mensaje</label>
+                        <textarea rows="4" class="w-full p-3 rounded-lg bg-white border border-gray-300 focus:ring-2 focus:ring-main-red outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="bg-main-red text-white font-bold py-3 px-8 rounded-lg hover:bg-black transition w-full md:w-auto">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <!-- Información y Mapa -->
+            <div>
+                <h2 class="text-4xl font-bold text-main-red mb-6">Ubicación</h2>
+                <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <svg class="w-6 h-6 text-accent-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <p class="text-gray-700">Calle de los Sabores 123, Distrito Gastronómico. Ciudad Gourmet.</p>
+                    </div>
+                    <div class="flex items-start space-x-4 mb-4">
+                        <svg class="w-6 h-6 text-accent-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <p class="text-gray-700">+51 987 654 321</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <svg class="w-6 h-6 text-accent-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <p class="text-gray-700">Lun - Dom: 12:00 PM - 11:00 PM</p>
+                    </div>
+                </div>
+                <!-- Mapa Placeholder -->
+                <div class="w-full h-64 bg-gray-300 rounded-xl overflow-hidden relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-500 font-bold bg-gray-200">
+                        <div class="text-center">
+                            <p>[Mapa Interactivo de Ubicación]</p>
+                            <p class="text-xs mt-2">Ubicado en el corazón de la ciudad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-main-red text-[#EDE4C2] py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-4">PIZZA CHEEZE</h3>
+            <p class="mb-6 opacity-80">Celebrando 25 años de sabor real y tradición artesanal.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-accent-orange transition">Instagram</a>
+                <a href="#" class="hover:text-accent-orange transition">Facebook</a>
+                <a href="#" class="hover:text-accent-orange transition">WhatsApp</a>
+            </div>
+            <p class="text-sm opacity-60">© 2024 Pizza Cheeze. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Control de menú móvil
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú al hacer click en un link (móvil)
+        const links = document.querySelectorAll('#mobile-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
